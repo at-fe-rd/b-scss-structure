@@ -1,4 +1,4 @@
-# SCSS Folder Structure Boilerplate
+# SCSS Structure Boilerplate
 
 SCSS Directories
 ------
@@ -6,8 +6,8 @@ SCSS Directories
 
     > The base directory contains styles that help start a project. It depends on each project that you style accordingly.
 
-    * Reset : Reset CSS for all browser, I have put the code in this file.
-    * Fonts : Declaring @font-face to this file. See example:
+    * **Reset:** Reset CSS for all browser, I have put the code in this file and add it to top of @import, because of it only for reset, please don't use variables, mixin... here. If you want to set the default style for each element please go to `_base.scss`.
+    * **Fonts:** Declaring `@font-face` to this file. See example:
 
       ```
         @font-face {
@@ -16,9 +16,9 @@ SCSS Directories
         }
       ```
 
-    * Variables : Declaring Variables
-    * Mixins : Declaring Mixins
-    * Extends : Declaring Extends, You should use `%` to declare the extend. See example:
+    * **Variables:** Declaring Variables
+    * **Mixins:** Declaring Mixins
+    * **Extends:** Declaring Extends, You should use `%` to declare the extend. See example:
 
       ```
         %clr {
@@ -30,7 +30,7 @@ SCSS Directories
         }
       ```
 
-    * Base : This file is the place for you set the default style for each element in your site. See example:
+    * **Base:** This file is the place for you set the default style for each element in your site. See example:
 
       ```
         body {
@@ -55,8 +55,8 @@ SCSS Directories
 
     > The layout directory contains styles that are large containers of a page.
 
-    * Grid : Create the column, It depends in your project.
-    * Layout : Usually, using for creating layout have 2 column with sidebar left or right and consist site container. See example:
+    * **Grid:** Create the column, It depends in your project.
+    * **Layout:** Usually, using for creating layout have 2 column with sidebar left or right and consist site container. See example:
 
       ```
         .container {
@@ -77,8 +77,8 @@ SCSS Directories
         }
       ```
 
-    * Header : Style for site header
-    * Footer : Style for site footer
+    * **Header:** Style for site header
+    * **Footer:** Style for site footer
 
 3. Modules
   
@@ -122,7 +122,7 @@ SCSS Directories
     ```
 
 
-> Notice: In each subfolder have 1 file `_all.scss` this is the place for you `@import` all file have the same level as it. And all file `_all.scss` will be imported to root file `styles.scss`
+> **Notice:** In each subfolder have 1 file `_all.scss` this is the place for you `@import` all file have the same level as it. And all file `_all.scss` will be imported to root file `styles.scss`
 
 
 Rules
@@ -130,6 +130,7 @@ Rules
   * In case add more file please import correctly directory
   * Avoid code too many levels
   * Break files out into small modules
+  * Avoid using many `!important`, except file `_state.scss`
 
 Compiler
 ------

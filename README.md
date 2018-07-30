@@ -4,7 +4,7 @@ SCSS Directories
 ------
 1. Base
 
-    - The base directory contains styles that help start a project. It depends on each project that you style accordingly.
+    > The base directory contains styles that help start a project. It depends on each project that you style accordingly.
 
     * Reset : Reset CSS for all browser, I have put the code in this file.
     * Fonts : Declaring @font-face to this file. See example:
@@ -52,6 +52,9 @@ SCSS Directories
       ```
 
 2. Layout
+
+    > The layout directory contains styles that are large containers of a page.
+
     * Grid : Create the column, It depends in your project.
     * Layout : Usually, using for creating layout have 2 column with sidebar left or right and consist site container. See example:
 
@@ -79,7 +82,7 @@ SCSS Directories
 
 3. Modules
   
-    - A page may consist of multiple modules and should be styled individually. We usually use it to create the style for form, btn... or other modules. See example:
+    > A page may consist of multiple modules and should be styled individually. We usually use it to create the style for form, btn... or other modules. See example:
 
     ```
       // Button file
@@ -103,14 +106,37 @@ SCSS Directories
 
 4. Pages
     
-    - The pages directory contains any specific styles that a page may need to change from the generic layout or modules
+    > The pages directory contains any specific styles that a page may need to change from the generic layout or modules.
 
 5. State
 
-    - State : A state is something that augments and overrides all other styles, it just uses 1 class. See example:
+    > A state is something that augments and overrides all other styles. States should be made to stand alone and are usually built of a single class selector. See example:
 
-```
-Notice: In each subfolder have 1 file `_all.scss` this is the place for you `@import` all file have the same level as it. And all file `_all.scss` will be imported to root file `styles.scss`
-```
+    ```
+      .is-hidden {
+        display: none !important;
+      }
+      .is-active {
+        display: block !important;
+      }
+    ```
 
+
+> Notice: In each subfolder have 1 file `_all.scss` this is the place for you `@import` all file have the same level as it. And all file `_all.scss` will be imported to root file `styles.scss`
+
+
+Rules
+------
+  * In case add more file please import correctly directory
+  * Avoid code too many levels
+  * Break files out into small modules
+
+Compiler
+------
+  * Fast compile with node-sass: 
+      ```
+        node-sass -w -o ./ scss/styles.scss
+      ```
+    
+  * In case setup for the large project, you should use [webpack](https://webpack.js.org/) or [gulp](https://gulpjs.com/).
 

@@ -134,7 +134,7 @@ Rules
 
 Compiler
 ------
-  * Fast compile with node-sass: 
+  * Quick compile with node-sass: 
       ```
         node-sass -w -o ./ scss/styles.scss
       ```

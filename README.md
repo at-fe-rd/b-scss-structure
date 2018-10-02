@@ -131,6 +131,7 @@ Rules
   * Avoid code too many levels
   * Break files out into small modules
   * Avoid using many `!important`, except file `_state.scss`
+  * Put media responsive to the end of each file
 
 Compiler
 ------

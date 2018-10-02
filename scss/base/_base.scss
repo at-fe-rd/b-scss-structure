@@ -1,0 +1,5 @@
+@include respond-between(small, medium) {
+  .element {
+    font-weight: bold;
+  }
+}

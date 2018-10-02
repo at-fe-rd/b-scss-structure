@@ -39,3 +39,7 @@ a img {
 
 article, aside, details, figure, footer, header, menu, nav, section, summary {
   display: block; }
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .element {
+    font-weight: bold; } }

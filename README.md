@@ -94,7 +94,7 @@ SCSS Directories
       }
 
       // Form file
-      input:not([type="checkbox"]):not([type="checkbox"]) {
+      input:not([type="checkbox"]):not([type="radio"]) {
         width: 100%;
         border: 1px solid #e1e1e1;
         height: 32px;

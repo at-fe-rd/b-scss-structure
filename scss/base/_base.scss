@@ -1,5 +1,3 @@
-@include respond-between(small, medium) {
-  .element {
-    font-weight: bold;
-  }
+* {
+  box-sizing: border-box;
 }

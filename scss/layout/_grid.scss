@@ -17,18 +17,17 @@ $grid-columns: 12;
 $grid-gutter: 15px;
 $container-width: 1200px;
 .container {
-  @extend %clr;
   padding-left: $grid-gutter;
   padding-right: $grid-gutter;
   margin: 0 auto;
   max-width: $container-width;
 }
 .row {
-  @extend %clr;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: -$grid-gutter;
   margin-right: -$grid-gutter;
   > [class*="col-"] {
-    float: left;
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
   }

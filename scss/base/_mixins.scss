@@ -105,31 +105,39 @@
 $spacePositions: ('x', 'y', '*', 'top', 'left', 'right', 'bottom');
 $spaceSizes: 7;
 $paddingOrmargin: (m: 'margin', p: 'padding');
-@mixin buildSpace($type) {
+@mixin buildPositionViaSize($type, $size) {
   $getType: map-get($paddingOrmargin, $type);
-  @for $i from 0 to $spaceSizes {
-    $size: $i * 5;
-    @each $el in $spacePositions {
-      @if $el == 'x' {
-        .#{$type}x-#{$size} {
-          #{$getType}-left: #{f-pxRem($size)} !important;
-          #{$getType}-right: #{f-pxRem($size)} !important;
-        }
-      } @else if $el == 'y' {
-        .#{$type}y-#{$size} {
-          #{$getType}-top: #{f-pxRem($size)} !important;
-          #{$getType}-bottom: #{f-pxRem($size)} !important;
-        }
-      } @else if $el == '*' {
-        .#{$type}-#{$size} {
-          #{$getType}: #{f-pxRem($size)} !important;
-        }
-      } @else {
-        .#{$type}#{str-slice($el, 1, 1)}-#{$size} {
-          #{$getType}-#{$el}: #{f-pxRem($size)} !important;
-        }
+  @each $el in $spacePositions {
+    @if $el == 'x' {
+      .#{$type}x-#{$size} {
+        #{$getType}-left: #{f-pxRem($size)} !important;
+        #{$getType}-right: #{f-pxRem($size)} !important;
+      }
+    } @else if $el == 'y' {
+      .#{$type}y-#{$size} {
+        #{$getType}-top: #{f-pxRem($size)} !important;
+        #{$getType}-bottom: #{f-pxRem($size)} !important;
+      }
+    } @else if $el == '*' {
+      .#{$type}-#{$size} {
+        #{$getType}: #{f-pxRem($size)} !important;
+      }
+    } @else {
+      .#{$type}#{str-slice($el, 1, 1)}-#{$size} {
+        #{$getType}-#{$el}: #{f-pxRem($size)} !important;
       }
     }
+  }
+}
+@mixin buildSpace($type) {
+  @for $i from 0 to $spaceSizes {
+    $size: $i * 5;
+    @include buildPositionViaSize($type, $size);
+  }
+
+  // Add value 'auto' for margin
+  @if $type == 'm' {
+    @include buildPositionViaSize($type, 'auto');
   }
 }
 @include buildSpace('m'); // Margin

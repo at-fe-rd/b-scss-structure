@@ -1,0 +1,5 @@
+.product-inner {
+  @include pxRem(padding, 15);
+  @include pxRem(border-radius, 8);
+  border: 1px solid map-get($colors, border-gray);
+}

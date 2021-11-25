@@ -1,0 +1,4 @@
+.page-main {
+  @include pxRem(padding, 30 0);
+  min-height: 80vh;
+}

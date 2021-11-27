@@ -1,0 +1,9 @@
+.layout-2-col-left {
+  display: flex;
+  > .col-left {
+    width: 32%;
+  }
+  > .col-main {
+    width: 68%;
+  }
+}

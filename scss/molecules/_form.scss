@@ -1,0 +1,4 @@
+// Group form control
+.form-group {
+  @include pxRem(margin-bottom, 20);
+}

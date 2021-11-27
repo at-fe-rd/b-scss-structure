@@ -6,7 +6,7 @@ SCSS Directories
 
     > The base directory contains styles that help start a project. It depends on each project that you style accordingly.
 
-    * **Reset:** Reset is used to normalize browser's default styles, we have 2 ways to it:
+    * **Reset:** Reset is used to normalize browser's default styles, we have 2 ways to use it:
       1. With node_modules (recommeded)
           - `@import '~normalize.css/normalize.css';`
       2. Without node_modules

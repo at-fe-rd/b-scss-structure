@@ -2,7 +2,7 @@
 
 SCSS Directories
 ------
-1. Base
+1. **Base**
 
     > The base directory contains styles that help start a project. It depends on each project that you style accordingly.
 
@@ -55,22 +55,22 @@ SCSS Directories
         ...
       ```
 
-2. Atoms
+2. **Atoms**
     > Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.
 
     [Readmore from Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/#atoms)
 
-3. Molecules
+3. **Molecules**
     > Things start getting more interesting and tangible when we start combining `atoms` together. Molecules are groups of `atoms` bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.
 
     [Readmore from Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/#molecules)
 
-4. Organisms
+4. **Organisms**
     > Molecules give us some building blocks to work with, and we can now combine them together to form organisms. Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.
 
     [Readmore from Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/#organisms)
 
-5. Layout
+5. **Layout**
 
     > The layout directory contains styles that are large containers of a page.
 
@@ -89,7 +89,7 @@ SCSS Directories
         }
       ```
 
-6. Utilities
+6. **Utilities**
   
     > A page may consist of multiple modules and should be styled individually. We usually use it to create the style for form, btn... or other modules. See example:
 
@@ -113,7 +113,7 @@ SCSS Directories
       }
     ```
 
-7. Pages
+7. **Pages**
     
     > The pages directory contains any specific styles that a page may need to change from the generic layout or modules.
 

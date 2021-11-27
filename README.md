@@ -91,27 +91,7 @@ SCSS Directories
 
 6. **Utilities**
   
-    > A page may consist of multiple modules and should be styled individually. We usually use it to create the style for form, btn... or other modules. See example:
-
-    ```
-      // Button file
-      .btn {
-        padding: 10px 20px;
-        border-radius: 3px;
-        font-size: 16px;
-        background: #000;
-      }
-
-      // Form file
-      input:not([type="checkbox"]):not([type="radio"]) {
-        width: 100%;
-        border: 1px solid #e1e1e1;
-        height: 32px;
-        border-radius: 3px;
-        padding: 0 15px;
-        font-size: 16px;
-      }
-    ```
+    > Updating...
 
 7. **Pages**
     

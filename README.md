@@ -137,7 +137,7 @@ Compiler
 ------
   * Quick compile with node-sass: 
       ```
-        node-sass -w -o ./ scss/styles.scss
+        npx node-sass -w -o ./ scss/styles.scss
       ```
     
   * In case setup for the large project, you should use [webpack](https://webpack.js.org/) or [gulp](https://gulpjs.com/).

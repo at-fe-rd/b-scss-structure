@@ -118,8 +118,9 @@ SCSS Directories
     > The pages directory contains any specific styles that a page may need to change from the generic layout or modules.
 
 
-> **Notice:** In each subfolder have 1 file `_all.scss` this is the place for you `@import` all file have the same level as it. And all file `_all.scss` will be imported to root file `styles.scss`
-
+Notice
+------
+   * In each subfolder have 1 file `_all.scss` this is the place for you `@import` all file have the same level as it. And all file `_all.scss` will be imported to root file `styles.scss`
 
 Rules
 ------

@@ -6,7 +6,11 @@ SCSS Directories
 
     > The base directory contains styles that help start a project. It depends on each project that you style accordingly.
 
-    * **Reset:** Reset CSS for all browser, I have put the code in this file and add it to top of @import, because of it only for reset, please don't use variables, mixin... here. If you want to set the default style for each element please go to `_base.scss`.
+    * **Reset:** Reset is used to normalize browser's default styles, we have 2 ways to use it:
+      1. With node_modules (recommeded)
+          - `@import '~normalize.css/normalize.css';`
+      2. Without node_modules
+          - Use current reset CSS in `base/reset.scss`
     * **Fonts:** Declaring `@font-face` to this file. See example:
 
       ```
@@ -65,14 +69,12 @@ SCSS Directories
           margin: 0 auto;
         }
         .layout-2-col-left {
-          @extend %clr;
+          display: flex;
           > .col-left {
             width: 32%;
-            float: left;
           }
           > .col-main {
             width: 68%;
-            float: right;
           }
         }
       ```
@@ -128,7 +130,7 @@ SCSS Directories
 Rules
 ------
   * In case add more file please import correctly directory
-  * Avoid code too many levels
+  * Avoid nesting too many levels
   * Break files out into small modules
   * Avoid using many `!important`, except file `_state.scss`
   * Put media queries to the end of each file

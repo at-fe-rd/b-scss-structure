@@ -43,6 +43,17 @@
   }
 }
 
+// === FOR MOBILE/DESKTOP START ===
+@mixin respond-mobile() {
+  @include respond-below(large) {
+    @content;
+  }
+}
+@mixin respond-desktop() {
+  @include respond-above(large) {
+    @content;
+  }
+}
 
 // === CONVERT Px To Rem === //
 // How to use: @include pxRem(font-size, 16);
@@ -58,8 +69,7 @@
   // Assume em:
   @if (unitless($value) or unit($value) == em) {
     @return 0em + $value;
-  }
-  @else {
+  } @else {
     @return 0em + strip-units($value) / 16;
   }
 }
@@ -74,7 +84,7 @@
   $rem-values: ();
 
   // Ensure $values is a list.
-  @if type-of($values) != 'list' {
+  @if type-of($values) != "list" {
     $values: join((), $values);
   }
 
@@ -95,30 +105,33 @@
   // Don't add media query if it's not needed:
   @if $px-values != $rem-values {
     // @media only all {
-      #{$property}: $rem-values;
+    #{$property}: $rem-values;
     // }
   }
 }
 
 // === BUILD SPACE (margin, padding) === //
 // How to use: <div class="ml-5 mr-5 mx-5 my-5 m-5"></div>
-$spacePositions: ('x', 'y', '*', 'top', 'left', 'right', 'bottom');
+$spacePositions: ("x", "y", "*", "top", "left", "right", "bottom");
 $spaceSizes: 7;
-$paddingOrmargin: (m: 'margin', p: 'padding');
+$paddingOrmargin: (
+  m: "margin",
+  p: "padding",
+);
 @mixin _buildPositionViaSize($type, $size) {
   $getType: map-get($paddingOrmargin, $type);
   @each $el in $spacePositions {
-    @if $el == 'x' {
+    @if $el == "x" {
       .#{$type}x-#{$size} {
         #{$getType}-left: #{f-pxRem($size)} !important;
         #{$getType}-right: #{f-pxRem($size)} !important;
       }
-    } @else if $el == 'y' {
+    } @else if $el == "y" {
       .#{$type}y-#{$size} {
         #{$getType}-top: #{f-pxRem($size)} !important;
         #{$getType}-bottom: #{f-pxRem($size)} !important;
       }
-    } @else if $el == '*' {
+    } @else if $el == "*" {
       .#{$type}-#{$size} {
         #{$getType}: #{f-pxRem($size)} !important;
       }
@@ -136,8 +149,7 @@ $paddingOrmargin: (m: 'margin', p: 'padding');
   }
 
   // Add value 'auto' for margin
-  @if $type == 'm' {
-    @include _buildPositionViaSize($type, 'auto');
+  @if $type == "m" {
+    @include _buildPositionViaSize($type, "auto");
   }
 }
-

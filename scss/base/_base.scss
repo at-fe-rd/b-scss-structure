@@ -5,7 +5,7 @@ body {
   font-family: $font-body;
   font-weight: map-get($font-weight, normal);
   font-size: $font-size-base;
-  letter-spacing: -.025em;
+  letter-spacing: -0.025em;
 }
 p {
   line-height: 1.45;
@@ -22,7 +22,12 @@ a {
 img {
   max-width: 100%;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: map-get($font-weight, medium);
 }
 h1 {

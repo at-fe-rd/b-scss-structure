@@ -1,11 +1,11 @@
 // === Font === //
-$font-body: 'Open Sans', sans-serif;
+$font-body: "Open Sans", sans-serif;
 
 // === Font Weight === //
 $font-weight: (
   normal: 400,
   medium: 600,
-  bold: 700
+  bold: 700,
 );
 
 // == Breakpoints === //
@@ -14,7 +14,7 @@ $breakpoints: (
   medium: 768px,
   wide: 960px,
   large: 1024px,
-  largest: 1280px
+  largest: 1280px,
 );
 
 // === Colors === //
@@ -34,7 +34,7 @@ $colors: (
   brand-css: #379ad7,
   brand-js: #f1da4e,
   brand-scss: #be5f8b,
-  brand-nodejs: #7cbe42
+  brand-nodejs: #7cbe42,
 );
 
 // === z-index === //
@@ -45,13 +45,13 @@ $zindexs: (
   modal-backdrop: 1040,
   modal: 1050,
   popover: 1060,
-  tooltip: 1070
+  tooltip: 1070,
 );
 
 // === Typography === //
 $font-size-base: 0.875rem !default; // 14px
 $font-size-lg: $font-size-base * 1.25 !default;
-$font-size-sm: $font-size-base * .875 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
 
 $h-font-size: (
   h1: $font-size-base * 2.5,
@@ -59,5 +59,5 @@ $h-font-size: (
   h3: $font-size-base * 1.75,
   h4: $font-size-base * 1.5,
   h5: $font-size-base * 1.25,
-  h6: $font-size-base
+  h6: $font-size-base,
 );
